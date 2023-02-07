@@ -25,15 +25,7 @@ public class AlbumIterator implements Iterator {
         /**
          * Prevents checking for a song in an invalid position
          */
-        if (song.length > position - 1) {
-            if (song[position] != null) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
+        return song.length > position - 1 && song[position] != null;
     }
 
     /**
