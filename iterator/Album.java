@@ -1,7 +1,7 @@
 package iterator;
 
 /**
- * A list containing a
+ * A album which contains its name, an array of songs, and a count of how many songs have been added
  */
 public class Album {
     private Song[] songs;
@@ -24,15 +24,17 @@ public class Album {
      * @param artist The name of the author(s) of the song
      * @param length How long the song plays for
      * @param genre The genre of the song
+     * @return True if a song was able to be added, false if not
      */
     public boolean addSong(String name, String artist, double length, Genre genre) {
-        if (20 > count) {
-            songs[count] = new Song(name, artist, length, genre);
-            count++;
-            return true;
-        } else {
+        if (songs.length < count) {
             return false;
         }
+
+        songs[count] = new Song(name, artist, length, genre);
+        count++;
+
+        return true;
     }
 
     /**
@@ -45,6 +47,7 @@ public class Album {
 
     /**
      * Returns the name of the album
+     * @return The name of the album
      */
     public String getName() {
         return name;

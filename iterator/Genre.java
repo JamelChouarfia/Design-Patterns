@@ -1,5 +1,8 @@
 package iterator;
 
+/**
+ * The various genres that the songs can be
+ */
 public enum Genre {
     Rock,
     Pop,
