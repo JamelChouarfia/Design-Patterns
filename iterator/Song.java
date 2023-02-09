@@ -25,6 +25,7 @@ public class Song {
 
     /**
      * Returns a string detailing all of the information about the song
+     * @return A description of the song
      */
     public String toString() {
         return name + " by " + artist + " category: " + genre + " length: " + length + " min";
